@@ -1,0 +1,270 @@
+<html>
+<head>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <title>Photo album</title>
+  <link rel="stylesheet" href="./index.css">
+  
+</head>
+<body>
+  <ul class="gallery">
+
+        <div id="target15">
+                <li draggable="true" id="teste15"><img src="./assets/img16.jpg">
+                   Por mais que a AMI tenha bastante<br> beneficios
+                   os estudos são recentes e<br> por conta disso 
+                   não conseguem mostrar<br> o verdadeiro impacto na
+                   sociedade.<br> Mas fica claro que para  ter algum <br>
+                   impacto é nescessario que seja<br> levado em conta   
+                   a verdadeira desigualdade.
+                </li>
+               </div>
+
+        <div id="target14">
+                <li draggable="true" id="teste14"><img src="./assets/img15.png">
+                    A mídia televisiva, e principalmente <br>a Internet 
+                    tem potencial para reduzir<br> ou até mesmo acabar
+                     com isso, além <br> das políticas e estratégias 
+                      de alfabetização
+                </li>
+               </div>
+
+        <div id="target13">
+                <li draggable="true" id="teste13"><img src="./assets/img14.jpg">
+                  Como consequencia atualmente temos<br>
+                  mais homens em cargos altos do que mulheres<br>
+                  isso se deve bastante aos esteriotipos de genero<br>
+                  gerando ifelizmente uma grande DESIGUALDADE
+                </li>
+               </div>
+
+        <div id="target12">
+                <li draggable="true" id="teste12"><img src="./assets/img13.png">
+                  Apesar de não se ter muitos dados<br>
+                  é visivel que a participação das <br>
+                  mulheres na sociedade da informação <br>
+                  é menor que a dos homens,principalmente <br>
+                  em PAÍSES POBRES E MENOS DESENVOLVIDOS
+                </li>
+               </div>
+
+        <div id="target10">
+        <li draggable="true" id="teste10"><img src="./assets/img12.jpg">
+            E agora uma MULHER 
+            na mesma função.<br>
+            Brincadeiras aparte essa 
+            é um exemplo <br> da visão masculina
+            sobre o feminino <br>
+            para Carmen Luke as midias publicas<br>
+            fornecem "ensinos publicos" que influenciam<br>
+            e modelam a percepção das pessoas
+         </li>
+        </div>
+
+
+         <div id="target9">
+         <li draggable="true" id="teste9"><img src="./assets/img11.jpg">
+            Exemplo do que foi dito<br>
+            com alguns minutos fiz<br>
+            uma rapida pesquisa no google<br>
+            e achei um exemplo de um homem<br>
+            MECÂNICO
+         </li>
+        </div>
+
+
+         <div id="target8">
+        <li draggable="true" id="teste8"><img src="./assets/img10.jpg">
+           De acordo com o movimento feminista<br/>
+           ouve historicamente uma repressão<br/>
+           de vozes com as mulheres deixando<br/>
+           a cargo dos homens a representação<br>
+           das mulheres. o que levou a uma <br>
+           fetichização do feminino
+        </li>
+        </div>
+
+
+        <div id="target7">
+        <li draggable="true" id="teste7"><img src="./assets/img9.jpg">
+            O movimento feminista ajudou e <br/> 
+            promoveu análise de discursos a<br/>  partir da perspectiva 
+            de gênero<br/> se focando nas diferentes<br/> 
+            posições de poder e influência na midia
+        </li>
+        </div>
+
+        <div id="target6">
+        <li draggable="true" id="teste6"><img src="./assets/img7.jpg">
+           Cpacidade de saber lidar<br/>com as nescessidades informacionais<br/>
+           alem de ser capaz de usar<br/> as TICs (Capacidade Informacional)
+           </li>
+        </div>
+
+           <div id="target5">
+           <li draggable="true" id="teste5"><img src="./assets/img8.png"/>Envolvendo a compreensão e a<br/> 
+        capacidade de criticar o papel da mídia<br/> 
+        em uma sociedade<br/>(Capacidade Midiatica)</li>
+           </div>
+
+        <div id="target4">
+        <li draggable="true" id="teste4"><img src="./assets/img5.jpg"/>Visto isso a Unesco<br/>
+    Criou um curriculo para professores<br/>
+    contando com a AMI.</li>
+</div>
+
+    <div id="target3">
+    <li draggable="true" id="teste3"><img src="./assets/img4.jpg"/>Com o crescimento das TICs<br/>
+        Poderia ocorrer alguma discriminação?</li>
+     </div>   
+        
+        <div id="target2">
+        <li draggable="true" id="teste2"><img src="./assets/img3.jpg"/>Como por exemplo:<br/>1) Desenvolvimento de Habilidades<br/> 
+        para acompanharmos as Tecnologias Informacionais.<br/>
+        2)Desenvolvimento da Alfabetização<br/> 
+        midiática e informacional<br/></li>
+    </div>
+
+        <div id="target1">
+        <li draggable="true" id="teste1"><img src="./assets/img2.jpg"/>
+        Já a algum tempos têm sido desenvolvido<br/> 
+        Reformas educacionais para lidar<br/> da melhor forma com os desafios impostos<br/> 
+        pelas mídias</li>
+    </div>
+        <div id="target">
+        <li draggable="true" id="teste"><img src="./assets/tecnologia-2-e1527100178946.jpg">
+        Alfabetização midiática <br/>
+         informacional</li>
+        </div>
+        </ul>
+  <script>
+        $(function(){
+                var zIndex= 1, endTop=0, endLeft=450;
+        
+                function randRotation(index){
+                    let rot = Math.round( Math.random() * 90-45);
+                    return $(index).css({
+                        '-webkit-transform':'rotate('+rot+'deg)'
+                        ,'-moz-transform':'rotate('+rot+'deg)'
+                        ,'transform':'rotate('+rot+'deg)'
+                    });
+                }
+        
+                $('.gallery li').each(function(){
+                    randRotation(this).css({
+                        top:Math.round(Math.random()*50-25)
+                        ,left:Math.round(Math.random()*50-25)
+                        ,'zIndex': zIndex++
+                    })
+                    .click(function(){
+                        var myZindex = $(this).css('zIndex');
+                        $('.gallery li').not(this).each(function(){
+                            if( $(this).css('zIndex') > myZindex ){
+                                $(this).css('zIndex',$(this).css('zIndex')-1);
+                            }
+                        });
+                        if(! $(this).is('.active')){
+                            $(this).toggleClass('active')
+                            .animate({
+                                top:endTop
+                                ,left:endLeft,
+                                fontSize:40,
+                                
+                            })
+                            .css({zIndex:$('.gallery li').length });
+                            var activated=$('.gallery .active').not(this);
+                            activated.length && activated.click();
+                        }else{
+                            $('.gallery li').each(function(){$(this).css('zIndex',parseInt($(this).css('zIndex'),10)+1)});
+                            randRotation($(this).toggleClass('active'))
+                            .animate({
+                                top:Math.round(Math.random()*50-25)
+                                ,left:Math.round(Math.random()*50-25),
+                                fontSize:12,
+                            }).css({zIndex:1});
+                        }
+                    });
+                });
+            });
+        </script>
+</body>
+
+<script>
+    $( "#target" ).dblclick(function() {
+			$( "#teste" ).hide( "slow", function() {
+				
+              });
+            });
+            $( "#target1" ).dblclick(function() {
+			$( "#teste1" ).hide( "slow", function() {
+				
+              });
+            });
+            $( "#target2" ).dblclick(function() {
+			$( "#teste2" ).hide( "slow", function() {
+				
+              });
+            });
+            $( "#target3" ).dblclick(function() {
+			$( "#teste3" ).hide( "slow", function() {
+				
+              });
+            });
+            $( "#target4" ).dblclick(function() {
+			$( "#teste4" ).hide( "slow", function() {
+				
+              });
+            });
+            $( "#target5" ).dblclick(function() {
+			$( "#teste5" ).hide( "slow", function() {
+				
+              });
+            });
+            $( "#target6" ).dblclick(function() {
+			$( "#teste6" ).hide( "slow", function() {
+				
+              });
+            });
+            $( "#target7" ).dblclick(function() {
+			$( "#teste7" ).hide( "slow", function() {
+			
+              });
+            });
+            $( "#target8" ).dblclick(function() {
+			$( "#teste8" ).hide( "slow", function() {
+			
+              });
+            });
+            $( "#target9" ).dblclick(function() {
+			$( "#teste9" ).hide( "slow", function() {
+				
+              });
+            });
+            $( "#target10" ).dblclick(function() {
+			$( "#teste10" ).hide( "slow", function() {
+				
+              });
+            });
+            $( "#target12" ).dblclick(function() {
+			$( "#teste12" ).hide( "slow", function() {
+				
+              });
+            });
+            $( "#target13" ).dblclick(function() {
+			$( "#teste13" ).hide( "slow", function() {
+				
+              });
+            });
+            $( "#target14" ).dblclick(function() {
+			$( "#teste14" ).hide( "slow", function() {
+				
+              });
+            });
+            $( "#target15" ).dblclick(function() {
+			$( "#teste15" ).hide( "slow", function() {
+				
+              });
+            });
+</script>
+
+</html>
